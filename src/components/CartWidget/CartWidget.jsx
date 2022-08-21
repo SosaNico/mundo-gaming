@@ -1,10 +1,12 @@
-import React from 'react'
-import { TiShoppingCart } from 'react-icons/ti';
+import React from "react";
+import { TiShoppingCart } from "react-icons/ti";
 
 const CartWidget = () => {
-return (
-    <><TiShoppingCart className='icon'/>4</>
-)
-}
+    return (
+        <>
+            <TiShoppingCart className="icon" />4
+        </>
+    );
+};
 
 export default CartWidget;

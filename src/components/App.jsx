@@ -8,10 +8,8 @@ function App() {
     <div className="App">
       <Navbar/>
       <ItemListContainer title='Proyecto de React'/>
-      
-      
     </div>
   );
-}
+};
 
 export default App;
