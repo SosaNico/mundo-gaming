@@ -1,5 +1,6 @@
 import React from "react";
 import { TiShoppingCart } from "react-icons/ti";
+import "./CartWidget.css";
 
 const CartWidget = () => {
     return (
