@@ -2,8 +2,8 @@ import React from 'react';
 import Counter from "../Counter/Counter";
 const Item = ({producto}) => {
     function onAdd(count){
-        console.log(`Se han seleccionado ${count} productos!`)
-    }
+        console.log(`Se han seleccionado ${count} productos!`);
+    };
 return(
 <>
 <div className='col-md-2 m-3'>
@@ -16,8 +16,7 @@ return(
     </div>
 </div>
 </>
-)
-}
-
+);
+};
 
 export default Item;
