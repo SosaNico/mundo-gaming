@@ -1,7 +1,7 @@
 import {useState} from 'react';
 
-function Counter({stock, onAdd}) {
-    const [count, setCount] = useState(0);
+function Counter({stock, onAdd, initial}) {
+    const [count, setCount] = useState(initial);
 
     function add(){
         if(count < stock){
@@ -10,19 +10,18 @@ function Counter({stock, onAdd}) {
     };
 
     function substract(){
-        if(count > 0){
+        if(count > initial){
             setCount(count - 1);
         };
     };
 
     function reset(){
-        setCount(0);
+        setCount(initial);
     };
 
 return (
     <div className='text-center'>
         <div>
-            <h1 className='m-3'>Counter</h1>
             <p className='m-3'>Stock: {stock}</p>
             <p className='m-3'>Cantidad: {count}</p>
             <div>
