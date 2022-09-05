@@ -22,19 +22,18 @@ function Counter({stock, onAdd, initial}) {
 return (
     <div className='text-center'>
         <div>
-            <p className='m-3'>Stock: {stock}</p>
-            <p className='m-3'>Cantidad: {count}</p>
+            <h5 className='m-3'>Stock: {stock}</h5>
+            <h5 className='m-3'>Cantidad: {count}</h5>
             <div>
                 <button className='btn btn-success m-3' onClick={add}>+</button>
-                <button className='btn btn-light m-3' onClick={reset}>Reset</button>
+                <button className='btn btn-light m-3' onClick={reset}>Borrar</button>
                 <button className='btn btn-danger m-3' onClick={substract}>-</button>
             </div>
             <div>
-            <button className='btn btn-info  m-3' onClick={() => onAdd(count)}>Confirmar</button>
+                <button className='btn btn-info m-3' onClick={() => onAdd(count)}>Confirmar</button>
             </div>
         </div>
     </div>
-    
     );
 };
 
