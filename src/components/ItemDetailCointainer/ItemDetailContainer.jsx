@@ -6,7 +6,8 @@ import { useParams } from 'react-router-dom';
 const ItemDetailContainer = () => {
 
     const {id} = useParams();
-    const [item, setItem] = useState();
+    const [item, setItem] = useState({});
+    const [isLoading, setIsLoading] = useState(false);
 
     
     useEffect(() => {
@@ -15,11 +16,12 @@ const ItemDetailContainer = () => {
         });
         getData
         .then((res) => setItem(res.find((product) => product.id === id)))
-        .catch((err) => console.error(`Ocurrio el siguiente error: ${err}`));
+        .catch((err) => console.error(`Ocurrio el siguiente error: ${err}`))
+        .finally(() => setIsLoading(true));
     }, []); 
 
     return (
-        item ? <ItemDetail item={item}/> : <h1>Cargando...</h1>
+        isLoading ? <ItemDetail item={item}/> : <h1>Cargando...</h1>
     );
 };
 
