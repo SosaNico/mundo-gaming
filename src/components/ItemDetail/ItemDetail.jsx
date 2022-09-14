@@ -1,15 +1,20 @@
-import React from 'react';
-import { useState } from 'react';
+import { React, useState }from 'react';
 import Counter from "../Counter/Counter";
 import { Link } from 'react-router-dom';
+import { useCartContext } from '../context/CartContext';
 
 const ItemDetail = ({item}) => {
     const [show,setshow] = useState(true)
 
+    const { addItem } = useCartContext();
+
     const onAdd = (count) =>{
         setshow(false)
-        console.log(count)
+        addItem(item, count);
+        let stock = item.stock - count
+        item.stock = stock
     }
+
 return (
     <>
     <article className='m-3 d-grid d-flex'>
