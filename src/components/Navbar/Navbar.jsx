@@ -17,20 +17,20 @@ const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarColor01">
                     <ul className="navbar-nav me-auto">
-                        <Link to='/'>
-                            <li className="nav-link active">Home</li>
+                        <Link to='/' className='links'>
+                            <li className="nav-link active links-2 text-warning">Home</li>
                         </Link>
-                        <Link to='/categoria/silla'>
-                            <li className="nav-link active">Silla</li>
+                        <Link to='/categoria/silla' className='links'>
+                            <li className="nav-link active links-2 text-warning">Silla</li>
                         </Link> 
-                        <Link to='/categoria/placa'>
-                            <li className="nav-link active">Placa</li>
+                        <Link to='/categoria/placa' className='links'>
+                            <li className="nav-link active links-2 text-warning">Placa</li>
                         </Link> 
-                        <Link to='/categoria/memoria'>
-                            <li className="nav-link active">Memorias</li>
+                        <Link to='/categoria/memoria' className='links'>
+                            <li className="nav-link active links-2 text-warning">Memorias</li>
                         </Link>
-                        <Link to='/categoria/gabinete'>
-                            <li className="nav-link active">Gabinetes</li>
+                        <Link to='/categoria/gabinete' className='links'>
+                            <li className="nav-link active links-2 text-warning">Gabinetes</li>
                         </Link>
                             <CartWidget/>
                     </ul>

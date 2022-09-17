@@ -30,7 +30,7 @@ return (
                 <button className='btn btn-danger m-3' onClick={substract}>-</button>
             </div>
             <div>
-                <button className='btn btn-info m-3' onClick={() => onAdd(count)}>Confirmar</button>
+                <button className='btn btn-info m-3' onClick={() => onAdd(count)}>Agregar al carrito</button>
             </div>
         </div>
     </div>
