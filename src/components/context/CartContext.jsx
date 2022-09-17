@@ -20,15 +20,14 @@ export const CartProvider = ({children}) =>{
 
     const clear = () => setCart([]);
 
-    const isInCart = (id) => cart.find(product => product.id === id) ? true : false;
+    const isInCart = (id) => cart.some(product => product.id === id) 
 
     const removeItem = (id) => setCart(cart.filter(product => product.id !== id));
 
     const totalProducts = () => cart.reduce((collector, product)=> collector + product.quantity,0);
 
-    const totalPrice = () => {
-        return cart.reduce((prev, act)=>prev + act.quantity * act.price, 0)
-    }
+    const totalPrice = () => cart.reduce((prev, act)=>prev + act.quantity * act.price, 0)
+
 
 
 return (
