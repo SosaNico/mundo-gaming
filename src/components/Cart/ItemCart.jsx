@@ -3,8 +3,6 @@ import { useCartContext } from "../context/CartContext";
 import { FaTrashAlt } from 'react-icons/fa'
 import './ItemCart.css'
 
-
-
 export const ItemCart = ({ product }) => {
     const { removeItem } = useCartContext();
 
@@ -32,8 +30,7 @@ return (
             </div>
             <div className="col-2 d-flex align-items-center ms-5">
                 <div className="card-body m-2">
-                    <button className="btn btn-danger"><FaTrashAlt onClick={()=>removeItem(product.id)} className="icon-trash"/></button>
-                    {/* <button onClick={()=>removeItem(product.id)} className="btn btn-danger">Borrar</button> */}
+                    <button className="btn btn-danger" onClick={()=>removeItem(product.id)}><FaTrashAlt className="icon-trash"/></button>
                 </div>
                     
             </div>

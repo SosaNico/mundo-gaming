@@ -1,7 +1,8 @@
 import { React, useEffect, useState } from 'react';
-import productos from '../data/productos';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
+import db from '../../firebase/config';
+import { doc, getDoc } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
 
@@ -9,16 +10,22 @@ const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
     const [isLoading, setIsLoading] = useState(false);
 
-    
+    const getSelected = async(idItem) =>{
+        try {
+            const document =  doc(db, 'productos', idItem)
+            const response = await getDoc(document)
+            const result = {id: response.id, ...response.data()}
+            setItem(result)
+            setIsLoading(true)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     useEffect(() => {
-        const getData = new Promise((res) => {
-            setTimeout(() => res(productos),);
-        });
-        getData
-        .then((res) => setItem(res.find((product) => product.id === id)))
-        .catch((err) => console.error(`Ocurrio el siguiente error: ${err}`))
-        .finally(() => setIsLoading(true));
-    }, []); 
+        getSelected(id)
+    }, [id])
+    
 
     return (
         isLoading ? <ItemDetail item={item}/> : <h1>Cargando...</h1>
