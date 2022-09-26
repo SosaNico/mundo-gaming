@@ -8,7 +8,7 @@ export const Cart = () => {
   const { cart, totalPrice, clear} = useCartContext();
   const confirm = () => {
     Swal.fire("Muchas Gracias", "Por su compra en Mundo Gaming", "success");
-    clear()
+    /* clear() */
     };
 
   if (cart.length === 0) {
@@ -32,7 +32,7 @@ export const Cart = () => {
         <ItemCart key={item.id} product={item} />
       ))}
       <div className="d-flex justify-content-end m-5">
-      <Link to="/">
+      <Link to="/checkout">
       <button onClick={confirm} className="btn btn-outline-primary m-2">Finalizar Compra</button>
       </Link>
       <p className="fs-4 m-2">Total:</p>
