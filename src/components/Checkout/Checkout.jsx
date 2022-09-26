@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import db from '../../firebase/config'
 import { useCartContext } from '../context/CartContext'
+import Swal from "sweetalert2";
 
 const Checkout = () => {
     const {cart, totalPrice, clear} = useCartContext()
@@ -13,14 +14,17 @@ const Checkout = () => {
         Telefono:''
     })
     const {Nombre, Email, Telefono} = buyer;
-
+    const confirm = () => {
+        Swal.fire("Muchas Gracias", "Por su compra en Mundo Gaming", "success");
+        clear()
+        };
     const generateOrder = async(data) =>{
         try {
             const col = collection(db, "Orders")
             const order = await addDoc(col, data)
             console.log("OrdenNro:", order)
             setOrderId(order.id)
-            clear()
+            confirm()
         } catch (error) {
             console.log(error)
         }
