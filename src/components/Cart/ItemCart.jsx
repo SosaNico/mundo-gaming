@@ -1,5 +1,5 @@
 import React from "react";
-import { useCartContext } from "../context/CartContext";
+import { useCartContext } from "../Context/CartContext";
 import { FaTrashAlt } from 'react-icons/fa'
 import './ItemCart.css'
 
@@ -7,8 +7,8 @@ export const ItemCart = ({ product }) => {
     const { removeItem } = useCartContext();
 
 return (
-    <div className="card mb-3">
-        <div className="row g-0">
+    <div className="card bg-dark border-light">
+        <div className="row p-0 m-3">
                 <div className="col-2 p-3">
                     <img src={product.image} className="img-fluid rounded-start" alt={product.name}/>
                 </div>

@@ -16,7 +16,6 @@ export const CartProvider = ({children}) =>{
             setCart([...cart, {...item, quantity}])
         }
     }
-    console.log(cart)
 
     const clear = () => setCart([]);
 

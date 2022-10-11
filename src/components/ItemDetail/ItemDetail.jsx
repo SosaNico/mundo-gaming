@@ -1,7 +1,7 @@
 import { React, useState }from 'react';
 import Counter from "../Counter/Counter";
 import { Link } from 'react-router-dom';
-import { useCartContext } from '../context/CartContext';
+import { useCartContext } from '../Context/CartContext';
 
 const ItemDetail = ({item}) => {
     const [show,setshow] = useState(true)
@@ -17,15 +17,15 @@ const ItemDetail = ({item}) => {
 
 return (
     <>
-    <article className='m-3 d-grid d-flex'>
+    <article className='m-5 d-grid d-flex'>
         <div className='col-6 border border-5 border-secondary rounded-5 p-3'>
-        <h2 className='d-flex justify-content-center'>{item.name}</h2>
+        <h2 className='d-flex justify-content-center p-3'>{item.name}</h2>
         <div className='card-detail-left d-flex justify-content-center'>
-            <img src={item.image} alt={item.name} className='img w-50' />
+            <img src={item.image} alt={item.name} className='img w-75 p-3' />
         </div>
         </div>
-        <div className='d-flex justify-content-center'>
-        <div className='col-6 border border-3 border-danger rounded-5 p-3 text-center'>
+        <div className='d-flex justify-content-center text-center'>
+        <div className='col-6 border border-3 border-danger rounded-5 p-3'>
             <h4>{item.description}</h4>
             <h5 className='price text-center'>Precio: ${item.price}</h5>
             {show ? <Counter initial={1} stock={5} onAdd={onAdd}/> : 

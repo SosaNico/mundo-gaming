@@ -1,7 +1,7 @@
 import React from "react";
 import { TiShoppingCart } from "react-icons/ti";
 import "./CartWidget.css";
-import { useCartContext } from '../context/CartContext'
+import { useCartContext } from '../Context/CartContext'
 import { Link } from "react-router-dom";
 
 const CartWidget = () => {

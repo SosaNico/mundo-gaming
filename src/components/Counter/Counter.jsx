@@ -20,7 +20,7 @@ function Counter({stock, onAdd, initial}) {
     };
 
 return (
-    <div className='text-center'>
+    <div className='text-center m-5'>
         <div>
             <h5 className='m-3'>Stock: {stock}</h5>
             <h5 className='m-3'>Cantidad: {count}</h5>

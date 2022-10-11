@@ -3,6 +3,7 @@ import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
 import db from '../../firebase/config';
 import { doc, getDoc } from 'firebase/firestore';
+import Loader from '../Loader/Loader';
 
 const ItemDetailContainer = () => {
 
@@ -28,7 +29,9 @@ const ItemDetailContainer = () => {
     
 
     return (
-        isLoading ? <ItemDetail item={item}/> : <h1>Cargando...</h1>
+        isLoading ? 
+        <ItemDetail item={item}/>
+        : <Loader/>
     );
 };
 
