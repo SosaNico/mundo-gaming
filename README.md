@@ -25,7 +25,6 @@ Es un E-commerce de productos destinados al uso gaming, tanto como periféricos,
 # Demostracion
 
 [Demostracion](https://firebasestorage.googleapis.com/v0/b/mundogaming-99abe.appspot.com/o/Sin%20t%C3%ADtulo.mp4?alt=media&token=bfdfcdea-2b21-4d03-89d2-f65e8ff2abc1)
-https://firebasestorage.googleapis.com/v0/b/mundogaming-99abe.appspot.com/o/Sin%20t%C3%ADtulo.mp4?alt=media&token=bfdfcdea-2b21-4d03-89d2-f65e8ff2abc1
 
 ### Github
 > https://github.com/SosaNico
