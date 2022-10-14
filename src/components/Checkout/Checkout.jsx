@@ -64,7 +64,7 @@ const Checkout = () => {
                 <input type="number" name="Telefono" placeholder='Telefono' value={Telefono} onChange={handleInputChange} />
             </div>
             
-            <button className='btn btn-info my-5 form' onClick={()=>clear()}>Enviar</button>
+            <button className='btn btn-info my-5 form'>Enviar</button>
         </form>
             </>
             : <>
